@@ -77,7 +77,8 @@ for (let index = 0; index < valores.length; index++) {
 }
 
 for (const valor of valores) {
-  if (valor % 2 == 0) console.log(`Valores pares con el bucle for...of: ${valor}`);
+  if (valor % 2 == 0)
+    console.log(`Valores pares con el bucle for...of: ${valor}`);
 }
 
 //Ejercicio 10: Crea un nuevo arreglo con el doble de cada número sin usar map(), únicamente con for...of y push().
