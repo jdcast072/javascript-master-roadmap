@@ -8,17 +8,26 @@ const palabras = [
   "frontend",
 ];
 
+let cantidadPalabrasLargas = 0;
+
 for (const palabra of palabras) {
   //Al retornar un valor no agrego llaves
-  if (palabra.length > 8)
-    console.log(`Las palabras con mas de 8 letras son: ${palabra}`);
+  const cantidadLetras = palabra.length;
+  if (cantidadLetras >= 8) {
+    cantidadPalabrasLargas++;
+    console.log(
+      `Las palabras que tiene 8 o más letras son: ${palabra} con ${cantidadLetras} letras`,
+    );
+  }
 }
+console.log(`La cantidad de palabras largas dentro del array es de: ${cantidadPalabrasLargas}`)
+
 
 //Ejercicio 12: Encontrar la palabra más larga
 
 const words = ["casa", "computador", "mesa", "desarrollador", "mouse"];
 
-let majorWord = [];
+let majorWord = "";
 
 for (const major of words) {
   if (major.length >= majorWord.length) {
@@ -124,32 +133,36 @@ console.log(frecuencia);
 
 //Ejercicio 19 - Encontrar el segundo número mayor
 const numeros = [20, 10, 80, 50, 100, 70];
-let numeroMayor = 0;
-let segundoMayor = 0;
+let numeroMayor = -Infinity;
+let segundoMayor = -Infinity;
 for (const numero of numeros) {
-    if(numero>numeroMayor) {
-        segundoMayor = numeroMayor;
-        numeroMayor = numero;
-    }else if(numero>segundoMayor){
-        segundoMayor = numero;
-    };
+  if (numero > numeroMayor) {
+    segundoMayor = numeroMayor;
+    numeroMayor = numero;
+  } else if (numero > segundoMayor) {
+    segundoMayor = numero;
+  }
 }
 console.log(`Mayor: ${numeroMayor}`);
 console.log(`Segundo mayor: ${segundoMayor}`);
 
 //Ejercicio 20 - Mini estadística
 const estadistica = [5, 8, 2, 10, 1, 20, 15];
-let mayor = estadistica[0], menor = estadistica[0], promedioValor = 0, cantidad = 0,suma = 0;
+let mayor = estadistica[0],
+  menor = estadistica[0],
+  promedioValor = 0,
+  cantidad = 0,
+  suma = 0;
 for (const numero of estadistica) {
-    if (numero > mayor) mayor = numero;
-    if (numero < menor) menor = numero;
-    cantidad++;
-    suma += numero;    
+  if (numero > mayor) mayor = numero;
+  if (numero < menor) menor = numero;
+  cantidad++;
+  suma += numero;
 }
-promedioValor = suma/cantidad;
+promedioValor = suma / cantidad;
 
-console.log(`Mayor: ${mayor}`)
-console.log(`Menor: ${menor}`)
-console.log(`Promedio: ${promedioValor}`)
-console.log(`Cantidad de elementos: ${cantidad}`)
-console.log(`Valor total de los elementos: ${suma}`)
+console.log(`Mayor: ${mayor}`);
+console.log(`Menor: ${menor}`);
+console.log(`Promedio: ${promedioValor.toFixed(2)}`);
+console.log(`Cantidad: ${cantidad}`);
+console.log(`Suma: ${suma}`);
