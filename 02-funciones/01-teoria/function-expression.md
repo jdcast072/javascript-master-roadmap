@@ -97,6 +97,3 @@ Esto puede ser útil para:
 - Depuración.
 - Recursividad.
 - Mostrar nombres más descriptivos en los errores.
-
----
-
