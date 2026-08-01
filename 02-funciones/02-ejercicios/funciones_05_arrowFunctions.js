@@ -166,6 +166,26 @@ console.log(
 
 //Desafíos adicionales
 
+//Desafío 1: Convertir todas estas funciones a Arrow Functions.
+
+/*
+function sumar(a, b) {
+    return a + b;
+}
+
+function restar(a, b) {
+    return a - b;
+}
+
+function multiplicar(a, b) {
+    return a * b;
+}
+
+function dividir(a, b) {
+    return a / b;
+}
+*/
+
 const sumar = (a, b) => {
   return a + b;
 };
